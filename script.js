@@ -3,7 +3,7 @@ const speedEl = document.getElementById("speed");
 let idx = 1;
 const text = "We love programming!....";
 
-const speed = 300 / speedEl.value;
+let speed = 300 / speedEl.value;
 
 writeText();
 
@@ -17,3 +17,5 @@ function writeText() {
 
   setTimeout(writeText, speed);
 }
+
+speedEl.addEventListener("input", (e) => (speed = 300 / e.target.value));
